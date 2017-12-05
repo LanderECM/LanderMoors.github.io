@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSite</title>
+    <link rel="stylesheet" style="text/css" href="style.css">
+</head>
+<body>
+    <div id="begin" align="middle">
+        <h1>Website</h1>
+        <p>This is my Website</p>
+    </div> 
+
+    <div id="middle"> 
+        <p id=TiTe> The current time: </p>
+        <p id="time">timer here</p>
+    </div>
+    <div>
+ <form id="frm1" action="/ action_page.php">
+            <input type="text" name="fname">
+            <input type="text" name="lname">
+ </form>
+     <button onClick="myFunc()">Send</button>
+    </div>
+    <p id="text" align="center"></p>
+
+    <script type="text/javascript">
+        function timer (){
+    var d = new Date ()
+    var hours = d.getHours();
+    var minutes = d.getMinutes();
+    var seconds = d.getSeconds();    document.getElementById("time").innerHTML =
+    hours+":"+ minutes +":"+ seconds;
+}
+setInterval(timer, 1000);
+
+function myFunc(){
+    var x = document.getElementById("frm1");
+    var y1 = x.elements[0].value
+    var y2 = x.elements[1].value
+        if (y1&&y2=="lander"){
+        var te = "haha yes";
+            document.getElementById("text").innerHTML=te;
+        }
+}
+    </script>
+</body>
+</html>
